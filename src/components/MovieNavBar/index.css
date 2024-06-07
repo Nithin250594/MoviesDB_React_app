@@ -1,0 +1,121 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #daebf5;
+  height: 12vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.movie-logo {
+  font-size: 35px;
+  color: white;
+  background-color: #0280c4;
+  font-weight: 600;
+  font-family: 'sans-serif';
+  padding: 10px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 14px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 25px;
+  cursor: pointer;
+}
+
+.movie-logo:hover {
+  background-color: white;
+  color: #0280c4;
+  border: 2px #0280c4 solid;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.search-bar {
+  height: 40px;
+  width: 80%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px #545557 solid;
+  padding: 8px;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: #303438;
+}
+
+.search-bar::placeholder {
+  font-weight: 600;
+  font-size: 16px;
+  color: #545557;
+}
+
+.search-button {
+  height: 40px;
+  width: 70px;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #0280c4;
+  border: 1px #545557 solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  outline: 1px solid #0280c4;
+  background-color: transparent;
+  color: #0280c4;
+}
+
+.search-icon {
+  height: 25px;
+  width: 25px;
+  color: white;
+}
+
+.search-icon:hover {
+  color: #0280c4;
+}
+
+.navigate-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
+}
+
+.popular-link {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Roboto';
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  color: #545557;
+}
+
+.popular-link:hover {
+  color: #0559a8;
+  border-bottom: 3px solid #0280c4;
+  text-shadow: 1px 2px 5px #91d0f2;
+}
+
+.active-link-style {
+  color: #0559a8;
+  border-bottom: 3px solid #0280c4;
+  text-shadow: 1px 2px 5px #91d0f2;
+}

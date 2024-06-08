@@ -4,12 +4,16 @@
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #daebf5;
+  background-color: #dbf1ff;
   height: 12vh;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+}
+
+.movie-db-logo-link {
+  text-decoration-line: none;
 }
 
 .movie-logo {
@@ -27,7 +31,7 @@
 }
 
 .movie-logo:hover {
-  background-color: white;
+  background-color: #91cbf2;
   color: #0280c4;
   border: 2px #0280c4 solid;
 }
@@ -77,14 +81,13 @@
 
 .search-button:hover {
   outline: 1px solid #0280c4;
-  background-color: transparent;
-  color: #0280c4;
+  background-color: #91cbf2;
+  color: #0272bd;
+  font-weight: 600;
 }
 
-.search-icon {
-  height: 25px;
-  width: 25px;
-  color: white;
+.search-link {
+  text-decoration-line: none;
 }
 
 .search-icon:hover {

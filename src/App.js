@@ -6,6 +6,10 @@ import './App.css'
 const PopularMovies = React.lazy(() => import('./components/PopularMovies'))
 const TopRatedMovies = React.lazy(() => import('./components/TopRatedMovies'))
 const UpcomingMovies = React.lazy(() => import('./components/UpcomingMovies'))
+const SingleMovieDetails = React.lazy(() =>
+  import('./components/SingleMovieDetails'),
+)
+const SearchedMovies = React.lazy(() => import('./components/SearchedMovies'))
 
 const App = () => (
   <Suspense
@@ -19,6 +23,8 @@ const App = () => (
       <Route exact path="/" component={PopularMovies} />
       <Route exact path="/top-rated" component={TopRatedMovies} />
       <Route exact path="/upcoming" component={UpcomingMovies} />
+      <Route exact path="/movies/:id" component={SingleMovieDetails} />
+      <Route exact path="/movies/search/:search" component={SearchedMovies} />
     </Switch>
   </Suspense>
 )

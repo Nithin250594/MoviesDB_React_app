@@ -15,6 +15,11 @@
   flex-direction: column;
   background-color: #e4eaed;
   position: relative;
+  opacity: 0.6;
+}
+
+.movie-poster-card:hover {
+  opacity: 1;
 }
 
 .movie-image {
@@ -45,19 +50,24 @@
   color: #0559a8;
 }
 
+.view-button-link {
+  position: absolute;
+  bottom: 0;
+  height: 55px;
+  width: 100%;
+}
+
 .view-details-btn {
   background-color: #0280c4;
   font-size: 16px;
+  height: 55px;
+  width: 100%;
   color: white;
   font-weight: 400;
   font-family: 'Roboto';
   border: none;
   padding: 5px;
-  height: 55px;
-  width: 100%;
   cursor: pointer;
-  position: absolute;
-  bottom: 0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }

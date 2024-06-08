@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import './index.css'
 
 const MoviePoster = props => {
@@ -16,9 +17,11 @@ const MoviePoster = props => {
         <p className="movie-rating">
           Rating: <span className="rating-number">{rating}</span>
         </p>
-        <button type="button" className="view-details-btn">
-          View Details
-        </button>
+        <Link to={`/movies/${movieId}`} className="view-button-link">
+          <button type="button" className="view-details-btn">
+            View Details
+          </button>
+        </Link>
       </div>
     </li>
   )

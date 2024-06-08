@@ -1,4 +1,5 @@
-import {Link, useLocation} from 'react-router-dom'
+import {Link, useLocation, useHistory} from 'react-router-dom'
+import {useState} from 'react'
 
 import './index.css'
 
@@ -9,6 +10,7 @@ const MenuItemLinks = {
 }
 
 const MovieNavBar = () => {
+  const [searchInput, setSearchInput] = useState('')
   const location = useLocation()
 
   const activePopularLink =
@@ -20,16 +22,32 @@ const MovieNavBar = () => {
   const activeUpcomingLink =
     MenuItemLinks.upcoming === location.pathname ? 'active-link-style' : null
 
+  const history = useHistory()
+
+  const onClickSearch = () => {
+    if (searchInput !== '') {
+      history.push(`/movies/search/${searchInput}`)
+    }
+  }
+
+  const onChangeSearch = event => {
+    setSearchInput(event.target.value)
+  }
+
   return (
     <nav className="nav-bar">
-      <h1 className="movie-logo">movieDB</h1>
+      <Link to="/" className="movie-db-logo-link">
+        <h1 className="movie-logo">movieDB</h1>
+      </Link>
       <div className="search-container">
         <input
           type="search"
           placeholder="Search Movie"
           className="search-bar"
+          value={searchInput}
+          onChange={onChangeSearch}
         />
-        <button type="button" className="search-button">
+        <button type="button" className="search-button" onClick={onClickSearch}>
           Search
         </button>
       </div>

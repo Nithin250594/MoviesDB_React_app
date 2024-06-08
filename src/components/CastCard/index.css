@@ -1,0 +1,30 @@
+.cast-list-item {
+  margin-bottom: 15px;
+
+  margin-right: 15px;
+}
+
+.cast-card {
+  width: 280px;
+  height: 350px;
+  background-color: #e4eaed;
+  box-shadow: beige;
+  border: 1px solid #e6ede8;
+  text-align: center;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cast-image {
+  width: 100%;
+  height: 70%;
+}
+
+.cast-name-style {
+  color: #0559a8;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  margin-bottom: 6px;
+}

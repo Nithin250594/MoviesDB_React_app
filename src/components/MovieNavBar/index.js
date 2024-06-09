@@ -26,7 +26,7 @@ const MovieNavBar = () => {
 
   const onClickSearch = () => {
     if (searchInput !== '') {
-      history.push(`/movies/search/${searchInput}`)
+      history.replace(`/movies/search/${searchInput}`)
     }
   }
 

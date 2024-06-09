@@ -2,6 +2,14 @@
   background-image: radial-gradient(#edf2f5, #b8e5fc, #80c7ed);
   background-size: cover;
 }
+
+.loader-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .popular-movie-heading {
   font-size: 25px;
   color: #0559a8;

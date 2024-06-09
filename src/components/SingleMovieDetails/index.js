@@ -6,9 +6,17 @@ import MovieNavBar from '../MovieNavBar'
 import './index.css'
 import CastCard from '../CastCard'
 
+const apiStatus = {
+  initial: 'INITIAL',
+  success: 'SUCCESS',
+  inprogress: 'INPROGRESS',
+  failure: 'FAILURE',
+}
+
 const SingleMovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState(null)
   const [castDetails, setCastDetails] = useState([])
+  const [fetchApiStatus, setFetchApiStatus] = useState(apiStatus.initial)
 
   const {id} = useParams()
 
@@ -38,6 +46,7 @@ const SingleMovieDetails = () => {
   }
 
   useEffect(() => {
+    setFetchApiStatus(apiStatus.inprogress)
     const movieDetailsApi = `https://api.themoviedb.org/3/movie/${id}?api_key=819fed71625699e4528f2e4ed98137c9&language=en-US`
     const options = {
       method: 'GET',
@@ -50,6 +59,7 @@ const SingleMovieDetails = () => {
         const movieResponse = await fetch(movieDetailsApi, options)
         const singleMovieData = await movieResponse.json()
         // console.log(singleMovieData)
+        setFetchApiStatus(apiStatus.success)
         movieDetailsSection(singleMovieData)
       } catch (error) {
         console.error('Error while fetching Movie Details API:', error)
@@ -81,9 +91,14 @@ const SingleMovieDetails = () => {
     )
   }
 
-  return (
+  const loadingPage = () => (
+    <div className="loader-style">
+      <Loader type="ThreeDots" color="#3b82f6" height="80" width="80" />
+    </div>
+  )
+
+  const successPage = () => (
     <>
-      <MovieNavBar />
       <div className="single-movie-details">
         <div className="single-movie-details-section">
           <img
@@ -120,6 +135,24 @@ const SingleMovieDetails = () => {
           </ul>
         </div>
       </div>
+    </>
+  )
+
+  const switchCase = () => {
+    switch (fetchApiStatus) {
+      case apiStatus.inprogress:
+        return loadingPage()
+      case apiStatus.success:
+        return successPage()
+      default:
+        return null
+    }
+  }
+
+  return (
+    <>
+      <MovieNavBar />
+      {switchCase()}
     </>
   )
 }

@@ -41,7 +41,7 @@ const MovieNavBar = () => {
       </Link>
       <div className="search-container">
         <input
-          type="search"
+          type="text"
           placeholder="Search Movie"
           className="search-bar"
           value={searchInput}

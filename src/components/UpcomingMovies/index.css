@@ -1,6 +1,7 @@
 .bg-color {
   background-image: radial-gradient(#edf2f5, #b8e5fc, #80c7ed);
   background-size: cover;
+  padding-bottom: 20px;
 }
 .popular-movie-heading {
   font-size: 25px;

@@ -17,7 +17,6 @@ const SingleMovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState(null)
   const [castDetails, setCastDetails] = useState([])
   const [fetchApiStatus, setFetchApiStatus] = useState(apiStatus.initial)
-
   const {id} = useParams()
 
   const movieDetailsSection = movieData => {

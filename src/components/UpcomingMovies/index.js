@@ -87,13 +87,6 @@ const UpcomingMovies = () => {
           <MoviePoster movieDetails={eachMovieData} />
         ))}
       </ul>
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onNextClick={onNextClick}
-        onPrevClick={onPrevClick}
-        onSelectPage={onPageChange}
-      />
     </>
   )
 
@@ -112,6 +105,13 @@ const UpcomingMovies = () => {
     <div className="bg-color">
       <MovieNavBar />
       {switchCase()}
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onNextClick={onNextClick}
+        onPrevClick={onPrevClick}
+        onSelectPage={onPageChange}
+      />
     </div>
   )
 }

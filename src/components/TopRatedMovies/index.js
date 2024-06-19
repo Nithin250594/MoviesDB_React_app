@@ -54,13 +54,13 @@ const TopRatedMovies = () => {
 
   useEffect(() => {
     setFetchApiStatus(apiStatus.inprogress)
-    const popularApi = `https://api.themoviedb.org/3/movie/top_rated?api_key=819fed71625699e4528f2e4ed98137c9&language=en-US&page=${currentPage}`
+    const topRatedMoviesURL = `https://api.themoviedb.org/3/movie/top_rated?api_key=819fed71625699e4528f2e4ed98137c9&language=en-US&page=${currentPage}`
     const options = {
       method: 'GET',
     }
     const fetchData = async () => {
       try {
-        const response = await fetch(popularApi, options)
+        const response = await fetch(topRatedMoviesURL, options)
         const data = await response.json()
         if (response.ok) {
           setFetchApiStatus(apiStatus.success)
@@ -87,13 +87,6 @@ const TopRatedMovies = () => {
           <MoviePoster movieDetails={eachMovieData} />
         ))}
       </ul>
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onNextClick={onNextClick}
-        onPrevClick={onPrevClick}
-        onSelectPage={onPageChange}
-      />
     </>
   )
 
@@ -112,6 +105,13 @@ const TopRatedMovies = () => {
     <div className="bg-color">
       <MovieNavBar />
       {switchCase()}
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onNextClick={onNextClick}
+        onPrevClick={onPrevClick}
+        onSelectPage={onPageChange}
+      />
     </div>
   )
 }

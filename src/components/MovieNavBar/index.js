@@ -1,6 +1,5 @@
 import {Link, useLocation, useHistory} from 'react-router-dom'
 import {useState} from 'react'
-
 import './index.css'
 
 const MenuItemLinks = {
@@ -11,6 +10,7 @@ const MenuItemLinks = {
 
 const MovieNavBar = () => {
   const [searchInput, setSearchInput] = useState('')
+  const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
 
   const activePopularLink =
@@ -34,11 +34,16 @@ const MovieNavBar = () => {
     setSearchInput(event.target.value)
   }
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+
   return (
     <nav className="nav-bar">
       <Link to="/" className="movie-db-logo-link">
         <h1 className="movie-logo">movieDB</h1>
       </Link>
+
       <div className="search-container">
         <input
           type="text"
@@ -51,8 +56,10 @@ const MovieNavBar = () => {
           Search
         </button>
       </div>
-
-      <ul className="navigate-links">
+      <button type="button" className="hamburger-menu" onClick={toggleMenu}>
+        |||
+      </button>
+      <ul className={`navigate-links ${menuOpen ? 'open' : ''}`}>
         <Link to="/" className={`popular-link ${activePopularLink}`}>
           Popular
         </Link>

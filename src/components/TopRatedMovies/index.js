@@ -18,7 +18,7 @@ const TopRatedMovies = () => {
   const [fetchApiStatus, setFetchApiStatus] = useState(apiStatus.initial)
   const [currentPage, setCurrentPage] = useState(1)
   const [maxPages, setMaxPages] = useState()
-  const totalPages = 15
+  const totalPages = 10
 
   const onPageChange = page => {
     setCurrentPage(page)

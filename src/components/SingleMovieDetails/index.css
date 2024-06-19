@@ -87,3 +87,62 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+@media (max-width: 768px) {
+  .single-movie-details {
+    padding-top: 5vh;
+    padding-bottom: 10px;
+  }
+
+  .single-movie-poster {
+    height: 50vh;
+    align-self: center;
+  }
+
+  .single-movie-details-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .single-movie-name {
+    font-size: 41px;
+    text-align: center;
+    margin-left: 10px;
+  }
+
+  .genre-list {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: auto;
+  }
+  .genre-item {
+    font-size: 14px;
+  }
+
+  .sub-details-section {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .sub-details,
+  .about-movie {
+    text-align: center;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: auto;
+  }
+
+  .duration {
+    text-align: center;
+  }
+
+  .about-movie {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}

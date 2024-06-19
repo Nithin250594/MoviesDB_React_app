@@ -71,3 +71,50 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .movie-list-item {
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 95%;
+  }
+
+  .movie-poster-card {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .movie-image {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .movie-details {
+    width: 60%;
+    padding-left: 10px;
+  }
+
+  .movie-name {
+    font-size: 18px;
+  }
+
+  .movie-rating {
+    font-size: 12px;
+    position: relative;
+    padding-top: 35px;
+  }
+
+  .view-details-btn {
+    font-size: 14px;
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+}

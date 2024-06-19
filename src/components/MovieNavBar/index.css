@@ -126,6 +126,9 @@
 }
 
 @media (max-width: 768px) {
+  .nav-bar {
+    height: 9vh;
+  }
   .movie-logo {
     font-size: 25px;
   }
